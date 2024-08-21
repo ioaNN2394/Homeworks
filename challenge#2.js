@@ -15,7 +15,6 @@ class ArbolFamiliar {
         this.root = root;
     }
 
-    
     preOrderTraversal(node) {
         if (node == null) return;
 
@@ -67,18 +66,15 @@ class ArbolFamiliar {
 
 const grandParent = new Person("Juan Jose", "1950-01-01");
 
-
 const parent1 = new Person("Doroti Ismael", "1975-05-05");
-const parent2 = new Person("Jack Ryan ", "1978-09-10");
-
+const parent2 = new Person("Jack Ryan", "1978-09-10");
 
 const child1 = new Person("Kevin Rincon", "2000-12-12");
-
 
 grandParent.addChild(parent1);
 grandParent.addChild(parent2);
 parent1.addChild(child1);
 
-const ArbolFamiliar = new ArbolFamiliar(grandParent);
+const miArbolFamiliar = new ArbolFamiliar(grandParent);
 
-ArbolFamiliar.printTraversals();
+miArbolFamiliar.printTraversals();

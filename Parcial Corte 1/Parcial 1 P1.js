@@ -1,4 +1,4 @@
-class ListNode {
+class ListaNodo {
     constructor(value) {
       this.value = value;
       this.next = null;
@@ -6,10 +6,10 @@ class ListNode {
   }
   
   // Función para combinar dos listas enlazadas ordenadas de mayor a menor
-  function mergeSortedListsDescToAsc(list1, list2) {
+  function mergeSortedListsDescToAsc(lista1, lista2) {
     let resultHead = null;
-    let current1 = list1;
-    let current2 = list2;
+    let current1 = lista1;
+    let current2 = lista2;
   
     // Crear una lista enlazada con la unión de ambas listas
     while (current1 !== null || current2 !== null) {
@@ -29,7 +29,7 @@ class ListNode {
       }
   
       // Insertar al comienzo para ordenar de menor a mayor
-      const newNode = new ListNode(nextValue);
+      const newNode = new ListaNodo(nextValue);
       newNode.next = resultHead;
       resultHead = newNode;
     }
@@ -38,15 +38,15 @@ class ListNode {
   }
   
   // Ejemplo de uso
-  const list1 = new ListNode(5);
-  list1.next = new ListNode(3);
-  list1.next.next = new ListNode(1);
+  const lista1 = new ListaNodo(5);
+  lista1.next = new ListaNodo(3);
+  lista1.next.next = new ListaNodo(1);
   
-  const list2 = new ListNode(4);
-  list2.next = new ListNode(2);
-  list2.next.next = new ListNode(0);
+  const lista2 = new ListaNodo(4);
+  lista2.next = new ListaNodo(2);
+  lista2.next.next = new ListaNodo(0);
   
-  const mergedList = mergeSortedListsDescToAsc(list1, list2);
+  const mergedList = mergeSortedListsDescToAsc(lista1, lista2);
   
   // Imprimir la lista combinada
   let current = mergedList;
